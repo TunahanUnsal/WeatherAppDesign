@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">kekod_project1</string>
-    <string name="city_name">İstanbul</string>
-    <string name="city_temp">10°c</string>
+    <string name="city_name1">İstanbul</string>
+    <string name="city_name2">Ankara</string>
+    <string name="city_temp1">10°c</string>
+    <string name="city_temp2">5°c</string>
+
 </resources>
