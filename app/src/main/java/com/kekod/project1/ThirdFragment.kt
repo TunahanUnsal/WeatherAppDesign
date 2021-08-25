@@ -8,24 +8,23 @@ import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import com.github.matteobattilana.weather.PrecipType
 import com.kekod.project1.databinding.FragmentFirstBinding
-import com.kekod.project1.databinding.FragmentSecondBinding
+import com.kekod.project1.databinding.FragmentThirdBinding
 
 
-class SecondFragment : Fragment() {
+class ThirdFragment : Fragment() {
 
 
-    private var binding: FragmentSecondBinding? = null
+    private var binding: FragmentThirdBinding? = null
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+        savedInstanceState: Bundle?): View {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false)
+        binding = FragmentThirdBinding.inflate(inflater, container, false)
 
 
-        binding!!.weatherView.setWeatherData(PrecipType.RAIN)
+        binding!!.weatherView.setWeatherData(PrecipType.CLEAR)
 
 
         binding!!.cardLinear.alpha = 0.0f
@@ -47,8 +46,8 @@ class SecondFragment : Fragment() {
 
 
 
-
         return binding!!.root
     }
+
 
 }

@@ -10,12 +10,10 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/g13"
+        android:background="@drawable/g11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
 
     <LinearLayout
@@ -34,7 +32,7 @@
         android:id="@+id/card_linear"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/ic_drawable_background"
+        android:background="@drawable/ic_drawable_background_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -60,7 +58,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_snow" />
+                android:src="@drawable/ic_sunny" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,7 +92,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_raining" />
+                android:src="@drawable/ic_sunny" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -162,7 +160,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_snow" />
+                android:src="@drawable/ic_sunny" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -217,13 +215,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/candara"
-        android:text="@string/city_name1"
+        android:text="@string/city_name3"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/card_linear"
         app:layout_constraintStart_toStartOf="@+id/card_linear" />
+
 
     <com.github.matteobattilana.weather.WeatherView
         android:id="@+id/weather_view"
@@ -235,9 +234,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-
-
 
 
 

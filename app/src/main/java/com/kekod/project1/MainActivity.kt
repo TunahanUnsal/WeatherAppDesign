@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var fragment1 : Fragment
     private lateinit var fragment2 : Fragment
+    private lateinit var fragment3 : Fragment
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         fragment1 = FirstFragment()
         fragment2 = SecondFragment()
+        fragment3 = ThirdFragment()
 
 
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view, fragment1).commit()
@@ -54,7 +56,13 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSwipeLeft() {
 
-                replaceFragment_right(fragment2)
+                if (fragment1.isVisible){
+                    replaceFragment_right(fragment2)
+                }
+                else if(fragment2.isVisible){
+                    replaceFragment_right(fragment3)
+                }
+
 
 
                 super.onSwipeLeft()
@@ -62,7 +70,13 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSwipeRight() {
 
-                replaceFragment_left(fragment1)
+                if (fragment2.isVisible){
+                    replaceFragment_left(fragment1)
+                }
+                else if(fragment3.isVisible){
+                    replaceFragment_left(fragment2)
+                }
+
 
                 super.onSwipeRight()
             }
@@ -84,30 +98,16 @@ class MainActivity : AppCompatActivity() {
     private fun replaceFragment_left(fragment: Fragment) {
 
 
-        if(!fragment1.isVisible){
-
-            Log.d("TAG", "fragment1 is not visible")
             supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right,
                 R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container_view, fragment).commit()
-
-        }
-
-
 
 
 
     }
     private fun replaceFragment_right(fragment: Fragment) {
 
-        if(!fragment2.isVisible){
-            Log.d("TAG", "fragment2 is not visible")
             supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
                 R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container_view, fragment).commit()
-
-
-        }
-
-
 
 
     }

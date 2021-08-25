@@ -1,8 +1,20 @@
 <resources>
-    <string name="app_name">kekod_project1</string>
+    <string name="app_name">kekod_project</string>
     <string name="city_name1">İstanbul</string>
     <string name="city_name2">Ankara</string>
-    <string name="city_temp1">10°c</string>
-    <string name="city_temp2">5°c</string>
+    <string name="city_name3">Antalya</string>
+    <string name="city_temp1">10°</string>
+    <string name="city_temp2">11°</string>
+    <string name="city_temp3">12°</string>
+    <string name="city_temp4">4°</string>
+    <string name="city_temp5">6°</string>
+    <string name="city_temp6">5°c</string>
+    <string name="swipe">swipe</string>
+    <string name="monday">monday</string>
+    <string name="tuesday">tuesday</string>
+    <string name="wednesday">wed</string>
+    <string name="thursday">thursday</string>
+    <string name="friday">friday</string>
+
 
 </resources>

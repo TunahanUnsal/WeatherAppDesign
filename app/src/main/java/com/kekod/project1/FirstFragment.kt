@@ -26,8 +26,16 @@ class FirstFragment : Fragment() {
         binding!!.weatherView.setWeatherData(PrecipType.SNOW)
 
 
-        binding!!.nameText.alpha = 0.2f
-        binding!!.nameText.animate().apply {
+        binding!!.cardLinear.alpha = 0.0f
+        binding!!.cardLinear.animate().apply {
+            interpolator = LinearInterpolator()
+            duration = 1000
+            alpha(1f)
+            startDelay = 1000
+            start()
+        }
+        binding!!.weatherText.alpha = 0.0f
+        binding!!.weatherText.animate().apply {
             interpolator = LinearInterpolator()
             duration = 1000
             alpha(1f)
@@ -35,14 +43,7 @@ class FirstFragment : Fragment() {
             start()
         }
 
-        binding!!.tempText.alpha = 0.2f
-        binding!!.tempText.animate().apply {
-            interpolator = LinearInterpolator()
-            duration = 1000
-            alpha(1f)
-            startDelay = 1000
-            start()
-        }
+
 
 
 
